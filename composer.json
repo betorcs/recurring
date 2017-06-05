@@ -1,0 +1,8 @@
+{
+    "name": "betorcs/recurring",
+    "description": "A small sample how to use recurrent dates in php",
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+        "tplaner/when": "2.*"
+    }
+}
