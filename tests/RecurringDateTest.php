@@ -19,7 +19,7 @@ final class RecurringDateTest extends TestCase {
 
     public function testShouldReturnNextBetorcsBirthday() {
         // Given
-        $date = "1983-08-08"; // christmas
+        $date = "1983-08-08"; // betorcs birthday
         $rrule = "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=8";
 
         // When
