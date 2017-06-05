@@ -2,8 +2,15 @@
 
 It's a sample project to show how to use recurring dates in PHP.
 
+# How to
 
-src/RecurringDate.php
+```bash
+$ phpunit --bootstrap src/Recurringdate.php tests/RecurringDateTest.php
+```
+
+# Classes
+
+**src/RecurringDate.php**
 
 ```php
 <?php
@@ -33,7 +40,8 @@ final class RecurringDate {
 }
 ```
 
-tests/RecurringDateTest.php
+**tests/RecurringDateTest.php**
+
 ```php
 <?php
 
