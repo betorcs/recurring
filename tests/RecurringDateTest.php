@@ -11,7 +11,7 @@ final class RecurringDateTest extends TestCase {
         $rrule = "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=25";
 
         // When
-        $next = RecurringDate::getNextOccurence($date, $rrule);
+        $next = RecurringDate::getNextOccurrence($rrule, $date);
 
         // Then
         $this->assertEquals('2017-12-25', $next);
@@ -23,7 +23,7 @@ final class RecurringDateTest extends TestCase {
         $rrule = "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=8";
 
         // When
-        $next = RecurringDate::getNextOccurence($date, $rrule);
+        $next = RecurringDate::getNextOccurrence($rrule, $date);
 
         // Then
         $this->assertEquals('2017-08-08', $next);
@@ -35,7 +35,7 @@ final class RecurringDateTest extends TestCase {
         $rrule = "FREQ=YEARLY;BYMONTH=5;BYDAY=2SU";
 
         // When
-        $next = RecurringDate::getNextOccurence($date, $rrule);
+        $next = RecurringDate::getNextOccurrence($rrule, $date);
 
         // Then
         $this->assertEquals('2018-05-13', $next);
@@ -47,7 +47,7 @@ final class RecurringDateTest extends TestCase {
         $rrule = "FREQ=MONTHLY;BYDAY=-1FR";
 
         // When
-        $next = RecurringDate::getNextOccurence($date, $rrule);
+        $next = RecurringDate::getNextOccurrence($rrule, $date);
 
         // Then
         $this->assertEquals('2017-06-30', $next);

@@ -5,7 +5,7 @@ use When\When;
 
 final class RecurringDate {
     
-    public static function getNextOccurence($date = null, $rrule = null) {
+    public static function getNextOccurrence($rrule = null, $date = null) {
         $r = new When();
         $r->startDate(new DateTime($date))
             ->rrule($rrule)
