@@ -5,21 +5,20 @@ use When\When;
 
 final class RecurringDate {
     
-    public static function getNextOccurrence($rrule = null, $date = null) {
+    public static function getNextOccurrence($rrule = null) {
         $r = new When();
-        $r->startDate(new DateTime($date))
-            ->rrule($rrule)
-            ->generateOccurrences();
 
-        $today = new DateTime();
+        $r = $r->rrule($rrule);
 
-        foreach ($r->occurrences as $occur) {
-            if ($occur >= $today) {
-                return $occur->format('Y-m-d');
-            }
+        $date = new DateTime();
+
+        while (true) {
+
+            if ($r->occursOn($date))
+                return $date->format('Y-m-d');
+
+            $date->add(new DateInterval("P1D"));
         }
-
-        throw new OccurrenceNotFoundException();
     }
 
     
